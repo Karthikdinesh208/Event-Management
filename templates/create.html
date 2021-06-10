@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Add Event</title>
+</head>
+<style>
+  input {
+    margin-left: 200px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-bottom: 1px solid #ada1a1;
+}
+input :hover {
+  border-color: rgb(84, 255, 17);
+}
+input:focus {
+    border-bottom: 2px solid  rgb(84, 255, 17);
+  }
+  ::placeholder:hover {
+    color: rgb(84, 255, 17);
+  }
+::placeholder{
+  text-align:center;
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">Envision</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin_logout">Admin Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="../static/images/Event Fireworks Social Media Graphic.png"000000000 height=400px width=300px>
+            </div>
+            <div class="col-sm-5">
+                <h1 style="text-align: center;">Create a New Event</h1>
+                <hr>
+  <form  method="POST">
+     <div class="form-group">
+      <input type="text" name="eid" placeholder="Event id">
+      <br>
+      <br>
+    </div>
+    <div class="form-group">
+      <input type="text" name="ename" placeholder="Event name">
+      <br>
+      <br>
+
+    </div>
+
+<div class="form-group">
+      <input type="text" name="edate" placeholder="Event date">
+      <br>
+      <br>
+    </div>
+
+<div class="form-group">
+      <input type="text" name="evenue"  placeholder="Event venue">
+      <br>
+      <br>
+    </div>
+
+    <div class="form-group">
+      <input type="text" name="edesc" placeholder="Event Description">
+      <br>
+      <br>
+    </div>
+      <br>
+       <h2 style="text-align: center;">Organiser Details</h2>
+      <hr>
+      <br>
+      <div class="form-group">
+      <input type="text" name="oid" placeholder="Organiser ID">
+      <br>
+      <br>
+     </div>
+
+      <div class="form-group">
+      <input type="text" name="oname" placeholder="Enter Organiser Name">
+      <br>
+      <br>
+    </div>
+
+      <div class="form-group">
+      <input type="text" name="ophone" placeholder="Enter Organiser Contactno">
+      <br>
+      <br>
+    </div>
+
+    <button style="margin-left:250px" type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+            </div>
+        </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  </body>
+</html>

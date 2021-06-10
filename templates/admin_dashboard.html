@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Admin Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+</head>
+ <style>
+
+</style>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">Envision</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+        <li class="nav-item">
+        <a class="nav-link" href="/admin_logout">Admin Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div>
+    <center>
+          <h1>Envision</h1>
+          <h3 style="color:black;">
+            Admin Dashboard
+
+          </h3>
+        <hr>
+        <a href="/create" class="btn btn-primary">Create Event</a>
+    </center>
+
+          {% with messages= get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+                        <p style="text-align:center;color:red;font-size:20px;">{{msg}}</p>
+{% endfor %}
+{% endif %}
+{% endwith %}
+    {% if data %}
+
+
+        <hr>
+
+
+<h2>Event Details</h2>
+    <hr>
+   <table class="table table-hover">
+  <thead>
+
+    <tr class="table-primary">
+        <th class="table-secondary" scope="col">Event ID</th>
+        <th class="table-success" scope="col">Name</th>
+        <th class="table-danger" scope="col">Data </th>
+        <th class="table-warning" scope="col">Venue</th>
+        <th class="table-info" scope="col">Desc</th>
+        <th class="table-danger" scope="col">Org ID</th>
+        <th class="table-secondary" scope="col">Edit</th>
+        <th class="table-primary" scope="col">Delete</th>
+    </tr>
+  </thead>
+   <tbody>
+       {% for datas in data %}
+    <tr>
+        <td class="table-primary">{{datas['eid']}}</td>
+        <td class="table-secondary">{{datas['ename']}}</td>
+        <td class="table-warning">{{datas['edate']}}</td>
+        <td class="table-light">{{datas['evenue']}}</td>
+        <td class="table-success">{{datas['edesc']}}</td>
+        <td class="table-light">{{datas['oid']}}</td>
+        <td class="table-light"><a href="/admin_dashboard/edit/{{datas['eid']}}"><button type="submit" class="btn btn-warning">Edit</button> </a> </td>
+        <td class="table-light"><a href="/delete/{{datas['eid']}}"><button type="submit" class="btn btn-info">Delete</button> </a> </td>
+    </tr>
+    {% endfor %}
+   </tbody>
+</table>
+    {% else %}
+    <p style="text-align:center;color:white;font-size:25px;">Data not found</p>
+  {% endif %}
+<br>
+    <h2>Participant Details</h2>
+<hr>
+
+  <table class="table table-hover">
+    <thead>
+
+      <tr class="table-primary">
+                     <th class="table-secondary" scope="col">Participant ID</th>
+                     <th class="table-success" scope="col">USN</th>
+                     <th class="table-danger" scope="col">Name </th>
+                     <th class="table-info" scope="col">EventId</th>
+                     <th class="table-danger" scope="col">Event Name</th>
+                     <th class="table-warning" scope="col">Phone</th>
+                     <th class="table-primary" scope="col">Delete</th>
+      </tr>
+    </thead>
+     <tbody>
+         {% for infos in info %}
+      <tr>
+          <td class="table-primary">{{infos['pid']}}</td>
+          <td class="table-secondary">{{infos['usn']}}</td>
+          <td class="table-warning">{{infos['name']}}</td>
+          <td class="table-light">{{infos['eid']}}</td>
+          <td class="table-success">{{infos['ename']}}</td>
+          <td class="table-light">{{infos['phone']}}</td>
+          <td class="table-light"><a href="#"><button type="submit" class="btn btn-warning">DELETE</button> </a> </td>
+
+      </tr>
+      {% endfor %}
+     </tbody>
+  </table>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Add Event</title>
+</head>
+<style>
+  input {
+    margin-left: 200px;
+    outline: 0;
+    border-width: 0 0 2px;
+    border-bottom: 1px solid #ada1a1;
+}
+input :hover {
+  border-color: rgb(84, 255, 17);
+}
+input:focus {
+    border-bottom: 2px solid  rgb(84, 255, 17);
+  }
+  ::placeholder:hover {
+    color: rgb(84, 255, 17);
+  }
+::placeholder{
+  text-align:center;
+}
+</style>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+  <a class="navbar-brand" href="#">Envision</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/user_logout">User Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <div class="container">
+        <br>
+        <div style="border:1px solid green" class="row justify-content-center align-items-center">
+            <div class="col-sm-5">
+                <h1 style="text-align: center;">Give Us Your Feedback</h1>
+                <hr>
+  <form  method="POST">
+     <div class="form-group">
+      <input type="text" name="fname" placeholder="Enter your Name">
+      <br>
+      <br>
+    </div>
+    <div class="form-group">
+      <input type="text" name="fcont" placeholder="Enter your Contact No.">
+      <br>
+      <br>
+    </div>
+<div class="form-group">
+      <input type="text" name="fdesc" placeholder="Enter your Message">
+      <br>
+      <br>
+</div>
+
+      <button style="margin-left:250px;margin-bottom:25px" type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+            </div>
+        </div>
+        <hr>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  </body>
+</html>
